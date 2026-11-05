@@ -1,0 +1,78 @@
+[
+  {
+    "name": "overview",
+    "steps": [
+      {
+        "wait": 600
+      },
+      {
+        "click": "role=button[name=/Scan PRs/]"
+      },
+      {
+        "waitFor": "text=Auto-Complete Tracking"
+      }
+    ],
+    "width": 1440,
+    "height": 728
+  },
+  {
+    "name": "stale-prs",
+    "steps": [
+      {
+        "wait": 600
+      },
+      {
+        "click": "role=button[name=/Scan PRs/]"
+      },
+      {
+        "waitFor": "text=Auto-Complete Tracking"
+      }
+    ],
+    "selector": ".ax-card:has(.ax-card__title:text-matches('^Stale Pull Requests'))"
+  },
+  {
+    "name": "stale-branches",
+    "steps": [
+      {
+        "click": "role=tab[name=/Branch & Repo Hygiene/]"
+      },
+      {
+        "click": "role=button[name=/Scan Repositories/]"
+      },
+      {
+        "waitFor": "text=/Stale Branches \\(\\d+\\)/"
+      },
+      {
+        "click": "role=checkbox[name='Select experiment/new-nav']"
+      },
+      {
+        "click": "role=checkbox[name='Select feature/export-v2']"
+      },
+      {
+        "wait": 200
+      }
+    ],
+    "fullPage": true
+  },
+  {
+    "name": "repo-hygiene",
+    "steps": [
+      {
+        "click": "role=tab[name=/Branch & Repo Hygiene/]"
+      },
+      {
+        "click": "role=button[name=/Scan Repositories/]"
+      },
+      {
+        "waitFor": "text=/Stale Branches \\(\\d+\\)/"
+      },
+      {
+        "click": "role=tab[name=/Repository Hygiene/]"
+      },
+      {
+        "waitFor": "text=promo-video.mp4"
+      }
+    ],
+    "selector": ".ax-card:has(.ax-card__title:text-is('Repository Hygiene'))"
+  }
+]

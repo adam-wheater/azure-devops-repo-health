@@ -1,0 +1,108 @@
+{
+    "manifestVersion": 1,
+    "id": "repo-health",
+    "version": "1.0.0",
+    "name": "Repo Health",
+    "description": "PR quality dashboards and branch/repo hygiene auditing for Azure DevOps repositories.",
+    "publisher": "adam-wheater",
+    "categories": [
+        "Azure Repos"
+    ],
+    "tags": [
+        "repository",
+        "pull-request",
+        "branch",
+        "hygiene",
+        "quality",
+        "dashboard",
+        "code-review",
+        "best-practices"
+    ],
+    "targets": [
+        {
+            "id": "Microsoft.VisualStudio.Services"
+        }
+    ],
+    "icons": {
+        "default": "static/icon.png"
+    },
+    "screenshots": [
+        { "path": "static/screenshots/overview.png" },
+        { "path": "static/screenshots/stale-prs.png" },
+        { "path": "static/screenshots/stale-branches.png" },
+        { "path": "static/screenshots/repo-hygiene.png" }
+    ],
+    "content": {
+        "details": {
+            "path": "overview.md"
+        },
+        "license": {
+            "path": "LICENSE"
+        }
+    },
+    "links": {
+        "repository": {
+            "uri": "https://github.com/adam-wheater/azure-devops-repo-health"
+        },
+        "issues": {
+            "uri": "https://github.com/adam-wheater/azure-devops-repo-health/issues"
+        },
+        "support": {
+            "uri": "https://github.com/adam-wheater/azure-devops-repo-health/issues"
+        }
+    },
+    "repository": {
+        "type": "git",
+        "uri": "https://github.com/adam-wheater/azure-devops-repo-health"
+    },
+    "branding": {
+        "color": "#0078d4",
+        "theme": "dark"
+    },
+    "galleryFlags": [
+        "Preview"
+    ],
+    "contributions": [
+        {
+            "id": "repo-health-hub",
+            "type": "ms.vss-web.hub",
+            "description": "Repo Health hub under Code",
+            "targets": [
+                "ms.vss-code-web.code-hub-group"
+            ],
+            "properties": {
+                "name": "Repo Health",
+                "order": 99,
+                "uri": "dist/RepoHealthHub/RepoHealthHub.html",
+                "icon": {
+                    "light": "static/icon.png",
+                    "dark": "static/icon.png"
+                }
+            }
+        }
+    ],
+    "scopes": [
+        "vso.code_write",
+        "vso.extension.data",
+        "vso.project"
+    ],
+    "demands": [],
+    "files": [
+        {
+            "path": "dist",
+            "addressable": true
+        },
+        {
+            "path": "static",
+            "addressable": true
+        },
+        {
+            "path": "overview.md",
+            "addressable": true
+        },
+        {
+            "path": "LICENSE",
+            "addressable": true
+        }
+    ]
+}
